@@ -132,13 +132,11 @@ int Astar(vector<vector<int>>& a, int source, int dest, vector<vector<int>>& key
             found = true;
         }
         else{
-            cout<<"Hmm"<<endl;
             int nodeno = x->node;
             cout<<nodeno<<endl;
             unordered_set<int> parentkeys;
             cout<<"Printing X keys"<<endl;
             parentkeys = Union(parentkeys, x->keys);
-            cout<<"Oh"<<endl;
             for(auto it = parentkeys.begin();it!=parentkeys.end();it++){
                 cout << *it << " ";
             }
@@ -191,9 +189,6 @@ int main() {
 	file.open("input.txt");
 	for(int i = 0;i<n;i++){
 		for(int j = 0;j<n;j++){
-			//int x;
-			//cin >> x;
-			//a[i].push_back(x);
 			int x;
 			file >> x;
 			a[i].push_back(x);
